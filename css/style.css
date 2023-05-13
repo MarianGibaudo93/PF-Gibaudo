@@ -1,0 +1,284 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300&family=Playfair+Display:ital@1&display=swap');
+
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+:root {
+    --primary-color: #047aed;
+    --seconday-color: #1c3fa8;
+    --dark-color: #002240;
+    --light-color: #f4f4f4;
+}
+
+body {
+    font-family: "lato", sans-serif;
+    color: #333;
+    line-height: 1.6;
+}
+
+ul {
+    list-style-type: none;
+
+}
+
+a {
+    text-decoration: none;
+    color: #333;
+}
+
+h1,
+h2 {
+    font-weight: 300;
+    line-height: 1.2;
+    margin: 10px 0;
+}
+
+p {
+    margin: 10px 0;
+}
+
+img {
+    width: 100%;
+}
+
+/* Navbar*/
+.navbar {
+    
+    background-color: var(--primary-color);
+    color: #fff;
+    height: 60px;
+}
+
+.navbar ul {
+    display: flex;
+}
+
+.navbar a {
+    color: #fff;
+    padding: 10px;
+    margin: 0 5px;
+}
+
+.navbar a:hover {
+    border-bottom: 2px #fff solid;
+
+}
+
+.navbar .flex {
+    overflow: hidden;
+    justify-content: space-between
+    
+}
+
+/*ShowCase*/
+.showcase {
+    height: 400px;
+    background-color: var(--primary-color);
+    color: #fff;
+    position: relative;
+}
+
+.showcase h1 {
+    font-size: 40px;
+}
+
+.showcase p {
+    margin: 20px 0;
+}
+
+.showcase .grid {
+    overflow: hidden;
+    grid-template-columns: 55% 45%;
+    gap: 30px;
+}
+
+.showcase-form {
+    position: relative;
+    top: 60px;
+    height: 350px;
+    width: 280px;
+    padding: 40px;
+    z-index: 100;
+}
+
+.showcase-form .form-control {
+    margin: 30px 0;
+}
+
+
+
+.showcase-form input[type="text"],
+.showcase-form input[type="email"] {
+    border: 0;
+    border-bottom: 1px solid #b4becb;
+    width: 100%;
+    padding: 3px;
+    font-size: 16px;
+}
+
+.showcase-form input:focus {
+    outline: none;
+}
+
+.showcase-form::before,
+.showcase-form::after {
+    content: "";
+    position: absolute;
+    height: 100px;
+    bottom: -70px;
+    right: 0;
+    left: 0;
+}
+
+/*Stats*/
+.stats {
+    padding-top: 100px;
+}
+
+.stats-heading {
+    max-width: 500px;
+    margin: auto;
+}
+
+.stats .grid h3 {
+    font-size: 35px;
+}
+
+.stats .grid p {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+/*companias*/
+
+.companias .flex {
+    flex-wrap: wrap;
+}
+
+.companias {
+    text-align: center;
+    margin: 18px 10px 40px;
+}
+
+.companias .card {
+    text-align: center;
+    margin: 18px 10px 40px;
+    transition: transform 0.2s ease-in;
+}
+
+.companias .card:hover {
+    transform: translateY(-15px)
+}
+
+.footer .social a {
+    margin: 0 10px;
+}
+
+/*responsive tablets*/
+@media(max-width:768px) {
+
+    .grid,
+    .showcase .grid,
+    .stats .grid,
+    {
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr
+}
+
+.showcase {
+    height: auto;
+}
+
+.showcase-text {
+    text-align: center;
+    margin-top: 40px;
+}
+
+.showcase-form {
+    justify-content: center;
+    margin: auto;
+}
+}
+
+.img-nos {
+    width: 200px;
+}
+
+.container-nosotros {
+    display: flex;
+    flex-direction: row;
+    flex-grow: 3;
+    justify-content: space-around;
+    font-weight: bold;
+}
+
+.container-team {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap-reverse;
+    flex-grow: 4;
+    justify-content: center;
+    font-weight: bold;
+}
+
+.card-img-top {
+    width: 150px;
+}
+
+
+/*Container Cotiza*/
+.cotiza {
+    width: 450px;
+    padding: 30px;
+    margin: auto;
+    margin-top: 10px;
+    border-radius: 5px;
+}
+
+.itemc {
+    width: 100%;
+    padding: 10px;
+    border-radius: 5px;
+    margin-bottom: 20px;
+    border: 2px solid;
+}
+
+.buttonc {
+
+    width: 50%;
+    background-color: #1c3fa8;
+    border: none;
+    padding: 12px;
+    color: white;
+    margin: 16px;
+}
+
+.riesgos {
+    text-align: center;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap-reverse;
+    justify-content: center;
+    font-weight: bold;
+    transition: transform 0.2s ease-in;
+    transform: translateY(-15px)
+}
+
+/*responsive celulares*/
+@media(max-width:500px) {
+    .navbar {
+        height: 110px;
+    }
+
+    .navbar .flex {
+        flex-direction: column;
+    }
+
+    .navbar ul {
+        padding: 10px;
+        background-color: rgba (0, 0, 0, 0.1);
+    }
+}
